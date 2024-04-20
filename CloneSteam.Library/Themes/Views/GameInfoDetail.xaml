@@ -3,7 +3,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dunits="clr-namespace:CloneSteam.Library.UI.Units.Detail"
     xmlns:units="clr-namespace:CloneSteam.Library.UI.Units"
-    xmlns:views="clr-namespace:CloneSteam.Library.UI.Views">
+    xmlns:views="clr-namespace:CloneSteam.Library.UI.Views"
+    xmlns:icon="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF">
+   
 
     <Style TargetType="{x:Type views:GameInfoDetail}">
         <Setter Property="Template">
@@ -70,16 +72,18 @@
                                 </StackPanel>
 
                                 <!--subbutton-->
-                                
+                                <dunits:TopSubButton x:Name="SettingBtn" Content="Star"  HorizontalAlignment="Right" Width="30" Height="30" Margin="0 5 80 5"  Command="{Binding SettingBtnCommand}"/>
+                                <dunits:TopSubButton x:Name="InfoBtn" Content="InfoSlabCircle" HorizontalAlignment="Right" Width="30" Height="30" Margin="0 5 40 5" Command="{Binding InfoBtnCommand}"/>
+                                <dunits:TopSubButton x:Name="BookmarkBtn" Opacity="0.8" HorizontalAlignment="Right" Width="30" Height="30" Margin="0 5 0 5" Command="{Binding BookmarkBtnCommand}"/>
                             </Grid>
                             
                             <Border Margin="20 20 0 0" HorizontalAlignment="Stretch" Background="#3c444c"  Opacity="0.35" Height="40" >
                                 <StackPanel Orientation="Horizontal" >
-                                    <dunits:TopMenuButton x:Name="ShowPageButton" Content="상점 페이지" HorizontalAlignment="Right"  Width="120" Height="30" Margin="10 5 10 5" />
-                                    <dunits:TopMenuButton x:Name="CummunityHubButton" Content="커뮤니티 허브" Width="120" Height="28" Margin="5 0 10 0" HorizontalContentAlignment="Center"/>
-                                    <dunits:TopMenuButton x:Name="DebateButton" Content="토론"  Width="60" Height="28"  Margin="5 0 10 0" />
-                                    <dunits:TopMenuButton x:Name="GuideButton" Content="가이드" Width="80" Height="28"  Margin="5 0 10 0" HorizontalContentAlignment="Center"/>
-                                    <dunits:TopMenuButton x:Name="SupportButton" Content="지원" Width="60" Height="28"  Margin="6 0 10 0" HorizontalContentAlignment="Center"/>
+                                    <dunits:TopMenuButton x:Name="ShowPageBtn" Content="상점 페이지" HorizontalAlignment="Right"  Width="120" Height="30" Margin="10 5 10 5" Command="{Binding ShowPageCommand}"/>
+                                    <dunits:TopMenuButton x:Name="CummunityHubBtn" Content="커뮤니티 허브" Width="120" Height="28" Margin="5 0 10 0" Command="{Binding CummunityhubCommand}"/>
+                                    <dunits:TopMenuButton x:Name="DebateBtn" Content="토론"  Width="60" Height="28"  Margin="5 0 10 0" Command="{Binding DebateCommand}"/>
+                                    <dunits:TopMenuButton x:Name="GuideBtn" Content="가이드" Width="80" Height="28"  Margin="5 0 10 0" HorizontalContentAlignment="Center" Command="{Binding GuideCommand}"/>
+                                        <dunits:TopMenuButton x:Name="SupportBtn" Content="지원" Width="60" Height="28"  Margin="6 0 10 0" HorizontalContentAlignment="Center" Command="{Binding SupportCommand}"/>
                                 </StackPanel>
                             </Border>
                         </StackPanel>

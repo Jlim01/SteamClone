@@ -19,17 +19,23 @@ namespace CloneSteam.Library.Local.ViewModels
         List<LibraryCategory> gameInfos = new List<LibraryCategory>();
 
         [ObservableProperty]
-        private GameInfo currentGameInfo;
+        private GameInfoViewModel gameInfoViewModel = new();
 
-        public LibraryWindowViewModel(GameInfoService gameInfoService)
+        public LibraryWindowViewModel(GameInfoService gameInfoService) 
         {
             GameInfos = gameInfoService.GenerateCategoryNodes();
         }
 
+
         [RelayCommand]
         private void GameChanged(GameInfo gameInfo)
         {
-            CurrentGameInfo = gameInfo;
+            GameInfoViewModel.CurrentGameInfo = gameInfo;
+        }
+
+        public LibraryWindowViewModel()
+        {
+
         }
     }
 }
