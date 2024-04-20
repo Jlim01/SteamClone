@@ -1,0 +1,92 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dunits="clr-namespace:CloneSteam.Library.UI.Units.Detail">
+    <Style x:Name="TopMenuButton" TargetType="{x:Type dunits:TopMenuButton}">
+        <Setter Property="Foreground" Value="#dcdedf"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Background" Value="#3c444c"/>
+        <Setter Property="Opacity" Value="0.75"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+     
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type dunits:TopMenuButton}">
+                    <Border Background="{TemplateBinding Background}">
+                        <Label
+                    x:Name="CummunityHubBtn"
+                    Foreground="{TemplateBinding Foreground}"
+                     HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                    FontSize="{TemplateBinding FontSize}"
+                    Content="{TemplateBinding Content}"
+                     Opacity="{TemplateBinding Opacity}"
+                    FontWeight="Bold"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation
+                                    Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                                    To="#50565e"
+                                    Duration="0:0:0.1"/>
+                                        <DoubleAnimation
+                                    Storyboard.TargetProperty="Opacity"
+                                    From="0.35" To="1"
+                                    Duration="0:0:0.1"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation
+                                    Storyboard.TargetName="CummunityHubBtn"
+                                    Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"
+                                    To="White"
+                                    Duration="0:0:0.0"/>
+                                        <DoubleAnimation
+                                   Storyboard.TargetProperty="Opacity"
+                                   From="0.75" To="1"
+                                    Duration="0:0:0.1"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+
+
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation
+                                    Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"
+                                    To="#3c444c"
+                                    Duration="0:0:0.1"/>
+                                        <DoubleAnimation
+                                    Storyboard.TargetProperty="Opacity"
+                                    From="1" To="0.35"
+                                    Duration="0:0:0.1"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation
+                                    Storyboard.TargetName="CummunityHubBtn"
+                                    Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)"
+                                    To="#dcdedf"
+                                    Duration="0:0:0.1"/>
+                                        <DoubleAnimation
+                                  Storyboard.TargetProperty="Opacity"
+                                  From="1" To="0.75"
+                                    Duration="0:0:0.1"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

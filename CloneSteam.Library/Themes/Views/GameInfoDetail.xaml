@@ -12,8 +12,8 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="280" />
-                            <RowDefinition Height="100" />
-                            <RowDefinition Height="700" />
+                            <!--<RowDefinition Height="100" />-->
+                            <RowDefinition Height="800" />
                         </Grid.RowDefinitions>
 
                         <!--  border 백그라운드 이미지 세팅  -->
@@ -31,13 +31,13 @@
                             </Border.Background>
                         </Border>
 
-                        <Border Grid.Row="1" Opacity="0.8" Grid.RowSpan="2">
+                        <Border Grid.Row="1" Opacity="0.8">
                             <Border.Background>
                                 <VisualBrush>
                                     <VisualBrush.Visual>
                                         <Image Source="{Binding BackgroundImage}">
                                             <Image.Clip>
-                                                <RectangleGeometry Rect="0,280,1920,1080" />
+                                                <RectangleGeometry Rect="0,280,1920,380" />
                                             </Image.Clip>
                                             <Image.BitmapEffect>
                                                 <BlurBitmapEffect KernelType="Gaussian" Radius="50" />
@@ -47,30 +47,43 @@
                                 </VisualBrush>
                             </Border.Background>
                         </Border>
-
-                     
-
-
-                        <StackPanel
+                        <StackPanel Orientation="Vertical" Grid.Row="1">
+                            <Grid>
+                                <StackPanel
                             Grid.Row="1"
                             Margin="20,10,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
                             Orientation="Horizontal">
-                            <dunits:PlayButton Width="115" Height="33" />
-                            <dunits:PlayTimeText
+                                    <dunits:PlayButton Width="115" Height="33" />
+                                    <dunits:PlayTimeText
                                 Margin="20,0,0,0"
                                 ChildText="{Binding .}"
                                 FontSize="13"
                                 Text="마지막 플레이" />
-                            <dunits:PlayTimeText
+                                    <dunits:PlayTimeText
                                 Margin="20,0,0,0"
                                 ChildText="{Binding .}"
                                 FontSize="13"
                                 Text="플레이 시간" />
+
+                                </StackPanel>
+
+                                <!--subbutton-->
+                                
+                            </Grid>
+                            
+                            <Border Margin="20 20 0 0" HorizontalAlignment="Stretch" Background="#3c444c"  Opacity="0.35" Height="40" >
+                                <StackPanel Orientation="Horizontal" >
+                                    <dunits:TopMenuButton x:Name="ShowPageButton" Content="상점 페이지" HorizontalAlignment="Right"  Width="120" Height="30" Margin="10 5 10 5" />
+                                    <dunits:TopMenuButton x:Name="CummunityHubButton" Content="커뮤니티 허브" Width="120" Height="28" Margin="5 0 10 0" HorizontalContentAlignment="Center"/>
+                                    <dunits:TopMenuButton x:Name="DebateButton" Content="토론"  Width="60" Height="28"  Margin="5 0 10 0" />
+                                    <dunits:TopMenuButton x:Name="GuideButton" Content="가이드" Width="80" Height="28"  Margin="5 0 10 0" HorizontalContentAlignment="Center"/>
+                                    <dunits:TopMenuButton x:Name="SupportButton" Content="지원" Width="60" Height="28"  Margin="6 0 10 0" HorizontalContentAlignment="Center"/>
+                                </StackPanel>
+                            </Border>
                         </StackPanel>
                     </Grid>
-
 
                 </ControlTemplate>
             </Setter.Value>

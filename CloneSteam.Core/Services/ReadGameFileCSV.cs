@@ -13,7 +13,7 @@ namespace CloneSteam.Core.Services
     {
         public static string[]? GetFiles()
         {
-            string directoryPath = @"C:\Users\tmdgj\Desktop\GetSteamApps\bin";
+            string directoryPath = @"D:\TeamProject\GetSteamApps\bin";
 
 
                 // 지정된 경로의 모든 파일 가져오기

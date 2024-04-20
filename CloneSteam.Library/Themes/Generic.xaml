@@ -17,7 +17,7 @@
         <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Views/GameInfoDetail.xaml" />
         <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/PlayButton.xaml" />
         <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/PlayTimeText.xaml" />
-
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/TopMenuButton.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!--<Style TargetType="{x:Type Control}">
