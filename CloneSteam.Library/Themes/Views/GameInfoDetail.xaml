@@ -76,7 +76,7 @@
                                 <dunitsF:SettingButton x:Name="BookmarkBtn" HorizontalAlignment="Right" Width="30" Height="30" Margin="0 5 0 5" Command="{Binding BookmarkBtnCommand}"/>
                                 <dunitsF:BookmarkButton x:Name="SettingBtn" HorizontalAlignment="Right" Width="30" Height="30" Margin="0 5 80 5"  Command="{Binding SettingBtnCommand}"/>
                                 <dunitsF:InfoButton x:Name="InfoBtn" HorizontalAlignment="Right" Width="30" Height="30" Margin="0 5 40 5" Command="{Binding InfoBtnCommand}"/>
-                                
+
                             </Grid>
                             
                             <Border Margin="20 20 0 0" HorizontalAlignment="Stretch" Background="#3c444c"  Opacity="0.35" Height="40" >
