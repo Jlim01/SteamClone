@@ -67,7 +67,7 @@
                             </support:CustomScrollViewer>
 
                             <support:CustomScrollViewer Grid.RowSpan="4" Grid.Column="1">
-                                <views:GameInfoDetail DataContext="{Binding CurrentGameInfo}" />
+                                <views:GameInfoDetail DataContext="{Binding GameInfoViewModel}" />
                             </support:CustomScrollViewer>
 
 

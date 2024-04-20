@@ -18,6 +18,13 @@
         <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/PlayButton.xaml" />
         <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/PlayTimeText.xaml" />
         <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/TopMenuButton.xaml" />
+        <!--<ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/TopSubButton.xaml" />-->
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/CustomToolTip.xaml" />
+
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/Functions/BookmarkButton.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/Functions/InfoButton.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/Functions/SettingButton.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/CustomToolTip.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!--<Style TargetType="{x:Type Control}">
